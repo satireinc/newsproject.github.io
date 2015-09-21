@@ -1,0 +1,33 @@
+
+body{
+font-family: "texgyreherosregular", "Arial";
+}
+#main {
+    font-size: 50px;
+    height: 150px;
+    width:150px;
+    border-radius: 200px;
+    border: solid rgba(0,0,0,1) 2px;
+    background: transparent;  
+    transition: all 0.2s ease-in-out;
+}
+#buttons{
+    position: absolute;
+    height: 150px;
+    width: 460px;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;     
+}
+#main:hover{
+    background: black;
+    color: white;
+}
+#main:active {
+    background: white;
+}
+button:focus, textarea:focus {
+    outline: none;
+}
