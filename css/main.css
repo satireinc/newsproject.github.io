@@ -26,7 +26,7 @@ font-family: "texgyreherosregular", "Arial";
     color: white;
 }
 #main:active {
-    background: white;
+    background: red;
 }
 button:focus, textarea:focus {
     outline: none;

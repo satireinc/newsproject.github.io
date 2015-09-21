@@ -13,17 +13,28 @@
         <!--Font awesome-->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
       <!--Font Tex -->
-   <link rel="stylesheet" href="css/stylesheet.css" type="text/css" charset="utf-8" />
+   <link rel="stylesheet" href="css/stylesheet.css" type="text/css" charset="utf-8"/>
+  <link rel="stylesheet" href="source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
 
-       
-    
+<!-- JS -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="javascript/lightbox.min.js"></script>       
+    <script type="text/javascript" src="source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
 </head>
 
 <body>    
     <div id="buttons">
-    <a href="#"><button id="main">one</button></a>
+    <a class="fancybox" rel=group href="big_image_1.jpg" ><button id="main">one</button></a>
      <a href="#"><button id="main">two</button></a>
     <a href="#"><button id="main">three</button></a>
     </div>
 </body>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('.fancybox').fancybox();
+})    
+</script>
+    
 </html> 
