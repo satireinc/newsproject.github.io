@@ -2,6 +2,16 @@
 body{
 font-family: "texgyreherosregular", "Arial";
 }
+
+.title{
+    font-family: "texgyreherositalics", "Arial";
+    font-weight: lighter;
+    text-align: center;
+    margin-top: -10px;
+    position: relative;
+    top: 25px;
+    
+}
 #main {
     font-size: 50px;
     height: 150px;
@@ -10,11 +20,12 @@ font-family: "texgyreherosregular", "Arial";
     border: solid rgba(0,0,0,1) 2px;
     background: transparent;  
     transition: all 0.2s ease-in-out;
+    margin: 0px 10px;
 }
-#buttons{
+#buttoncontainer{
     position: absolute;
-    height: 150px;
-    width: 460px;
+    height: 180px;
+    width: 519px;
     top:0;
     bottom: 0;
     left: 0;
@@ -26,8 +37,17 @@ font-family: "texgyreherosregular", "Arial";
     color: white;
 }
 #main:active {
-    background: red;
+    border: solid 3px blue;
 }
 button:focus, textarea:focus {
     outline: none;
+}
+.des{
+    position: absolute;
+    bottom: 40px;
+    left: 100px;;
+    right: 0;
+    height: 10px;
+    width: 500px;
+    margin: auto;
 }
