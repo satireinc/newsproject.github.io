@@ -42,22 +42,28 @@
          
          <div style="display:none">
        <div id="one" style="padding: 10px; background: #fff;">
-          <h2>{{news.posts[0].title}}</h2>
+           <p class="text-center" ng-hide="dataLoaded">
+           <i class="fa fa-spinner fa-spin"></i>
+           </p>
+           <div ng-show="dataLoaded">
+         <h2> <a href="{{news.posts[0].url}}">{{news.posts[0].title}}</a></h2>
            <p>{{news.posts[0].published | date}}</p>
            <p>{{news.posts[0].author}}</p>
-           <a href="{{news.posts[0].url}}">{{news.posts[0].url}}</a>
+           <p>{{news.posts[0].thread.site}}</p>
+           </div>
        </div>              
        <div id="two" style="padding: 10px; background: #fff;">
-          <h2>{{news.posts[1].title}}</h2>
+          <h2><a href="{{news.posts[1].url}}">{{news.posts[1].title}}</a></h2>
            <p>{{news.posts[1].published | date}}</p>
            <p>{{news.posts[1].author}}</p>
-           <a href="{{news.posts[1].url}}">{{news.posts[0].url}}</a>
-       </div>                    
+           <p>{{news.posts[1].thread.site}}</p>
+ </div>                    
        <div id="three" style="padding: 10px; background: #fff;">
-          <h2>{{news.posts[2].title}}</h2>
+          <h2><a href="{{news.posts[2].url}}">{{news.posts[2].title}}</a>
+</h2>
            <p>{{news.posts[2].published | date}}</p>
            <p>{{news.posts[2].author}}</p>
-           <a href="{{news.posts[2].url}}">{{news.posts[0].url}}</a>
+           <p>{{news.posts[2].thread.site}}</p>
        </div>                 
              
          </div>
@@ -68,8 +74,7 @@
     
 <script type="text/javascript">
 $(document).ready(function() {
-$(".inline").colorbox({inline:true, width:"50%"});
-
+    $('#one').offset();
 })    
 </script>
          </body>
