@@ -14,59 +14,74 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
       <!--Font Tex -->
    <link rel="stylesheet" href="css/stylesheet.css" type="text/css" charset="utf-8"/>
-  <link rel="stylesheet" href="source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<!--lightbox css-->
+      <link rel="stylesheet" href="css/colorbox.css"/>
 
 <!-- JS -->
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-    <script type="text/javascript" src="source/jquery.fancybox.pack.js?v=2.1.5"></script>
-<script src="javascript/webs.js"></script>
+<script src="javascript/jquery.colorbox-min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 </head>
 
-<body>
+  <body ng-app="NewsApp">
+     <div ng-controller="MainController">
+
     <div class="title">
         <i class="fa fa-bullhorn fa-3x"></i>
     <h1 class="title" id="logo">aplos news</h1>
     </div>
-    <div id="buttoncontainer">
-    <a class="fancybox" rel=group  href="#onedata" ><button id="main">one</button></a>
-     <a href="#"><button id="main">two</button></a>
-    <a href="#"><button id="main">three</button></a>
-    </div>
+
     
-    <div style='display:none'id='onedata'>Eventually, this will display the JSON of the top news site. working on the implementation.
-    / / / / / / / // / / / / // / / / / /  / / /    
-        Nostrum repudiare ne eam, no vidit quodsi inimicus vel, eu doming phaedrum has. Ut aeterno forensibus sea. Eum et fierent officiis euripidis, appetere concludaturque mea et, tempor fabulas eos ei. Voluptua pericula ea sed. Dico mollis no ius, minim eripuit commune mel ea. Zril facete pertinax vis ne, dolor delectus pri ne, sed eu novum soluta. Ex sea idque dicta.
-
-Periculis incorrupte usu ad, eum id elit urbanitas vulputate. An rebum viris tincidunt pri. Ei numquam utroque vis, quaeque accusam sea id. Qualisque consequuntur voluptatibus vim et, dicit luptatum at nec. No praesent petentium qui, at sed omnesque verterem efficiantur. Eirmod detraxit sit ad, vide commune cotidieque nam ex. Cu pri elit graecis suavitate, et reprimique comprehensam duo.
-
-Odio enim brute id mei, qui ea augue iudicabit. Ius diam quando id, probo velit copiosae sit id, te nec tale corpora. Nostrud definitiones at pro, pri ad aperiri copiosae honestatis. Qui te putent putant recusabo. Cu vix oblique patrioque.
-
-Sit detracto fabellas repudiandae ad, ne quo mutat decore omnium. Euismod suavitate assentior ad vel. Lobortis sententiae assueverit eu mel, nec an dolor exerci vocent, est eu veri volumus ullamcorper. Nibh recteque cum eu, vix diam dissentiunt ea. Cu aliquip gloriatur nam, nobis fastidii ocurreret ad nec, nisl idque honestatis pro ei.
-
-Zril homero at nec. Id quas meliore duo. Scripta recusabo dignissim te vim, vix debitis nostrum placerat in. Iriure sensibus perpetua eos et, et timeam tritani maluisset sit. Eu quas facer graece mel, ea sed falli doctus expetenda. Ex has accumsan mandamus gloriatur. Vis te accusam detraxit philosophia, nec choro luptatum complectitur no.
-
-Veritus repudiandae qui at. Semper labores cum at, modus mundi tincidunt cum cu. Liber oportere qui te, ea vim iracundia reformidans. Vis ut lorem sententiae adipiscing, te vel ferri nemore ocurreret, brute novum meliore ut cum. Alia dicam doming sed et. Vivendum ullamcorper consequuntur sit ea, vix volutpat tractatos ea.
-
-Usu indoctum abhorreant referrentur ea, ad nam iusto noluisse. Sea at utroque mediocritatem, ei justo impetus usu. Dicant veniam splendide ei sit. Eam simul dolorum tractatos ex, qui novum qualisque ei.
-
-Vel tation cetero nonumes an, vel officiis cotidieque ne. Ne clita mollis volumus cum, ex quas option temporibus sit. Sea populo putant instructior id. Nec an senserit tractatos, tritani electram id sea, possit vulputate appellantur cu his. Eam ei utinam honestatis mediocritatem, omnesque molestiae eam at.
-
-Quod munere posidonium eu qui, vim no inermis sensibus inciderint, sed omnes urbanitas expetendis in. Vix quaerendum adversarium ad. Consul putent lucilius ad ius, in quot offendit qui. Mazim ceteros id quo.
-
-Ei iusto equidem civibus vix. An mollis intellegat scriptorem est, no illum falli patrioque sit. Quo ea cibo impetus eleifend. Dicta mundi minimum per ad, aeque dolorum evertitur ad eos.
+        <div id="buttoncontainer">
+   
+            <a class="inline" href="#one"><button id="main">one</button></a>
+            <a class="inline" href="#two"><button id="main">two</button></a>
+            <a class="inline" href="#three"><button id="main">three</button></a>
+         </div>
+         
+         <div style="display:none">
+       <div id="one" style="padding: 10px; background: #fff;">
+          <h2>{{news.posts[0].title}}</h2>
+           <p>{{news.posts[0].published | date}}</p>
+           <p>{{news.posts[0].author}}</p>
+           <a href="{{news.posts[0].url}}">{{news.posts[0].url}}</a>
+       </div>              
+       <div id="two" style="padding: 10px; background: #fff;">
+          <h2>{{news.posts[1].title}}</h2>
+           <p>{{news.posts[1].published | date}}</p>
+           <p>{{news.posts[1].author}}</p>
+           <a href="{{news.posts[1].url}}">{{news.posts[0].url}}</a>
+       </div>                    
+       <div id="three" style="padding: 10px; background: #fff;">
+          <h2>{{news.posts[2].title}}</h2>
+           <p>{{news.posts[2].published | date}}</p>
+           <p>{{news.posts[2].author}}</p>
+           <a href="{{news.posts[2].url}}">{{news.posts[0].url}}</a>
+       </div>                 
+             
+         </div>
       
-      </div>
-    
-    <footer class="des">top three news of the day. made by <a href="http://bryanchen.ml">Bryan C</a> with Webhose API.</footer>
-</body>
+    <footer class="des">top three news of the day. made by <a href="http://bryanchen.ml">Bryan C</a> with AngularJS + webhose </footer>
     
     
     
 <script type="text/javascript">
 $(document).ready(function() {
-    $('.fancybox').fancybox();
+$(".inline").colorbox({inline:true, width:"50%"});
+
 })    
 </script>
+         </body>
+     
+
+    <!-- Modules -->
+    <script src="javascript/app.js"></script>
+
+    <!-- Controllers -->
+    <script src="javascript/controllers/MainController.js"></script>    
+
+    <!-- Services -->
+    <script src="javascript/services/news.js"></script>
     
 </html> 

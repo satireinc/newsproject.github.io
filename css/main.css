@@ -1,6 +1,7 @@
 
 body{
 font-family: "texgyreherosregular", "Arial";
+    background: black;
 }
 
 .title{
@@ -44,10 +45,13 @@ button:focus, textarea:focus {
 }
 .des{
     position: absolute;
-    bottom: 40px;
-    left: 100px;;
-    right: 0;
+    bottom: 50px;
+    left: 0px;;
+    right: 0px;
     height: 10px;
-    width: 500px;
+    width: 510px;
     margin: auto;
+}
+.hide{
+    display: none;
 }
