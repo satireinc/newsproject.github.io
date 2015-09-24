@@ -39,8 +39,8 @@ font-family: "texgyreherosregular", "Arial";
 #main:active {
     border: solid 3px blue;
 }
-button:focus, textarea:focus {
-    outline: none;
+*:focus {
+    outline: 0;
 }
 .des{
     position: absolute;
