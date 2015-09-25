@@ -65,8 +65,8 @@ font-family: "texgyreherosregular", "Arial";
     
 }
 img{
-    height: 100px;
-    widht: 100px;
+    height: 75%;
+    width: 75%;
     border: solid 2px black;
     border-radius: 4px;
 }
