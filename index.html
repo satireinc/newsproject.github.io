@@ -16,17 +16,19 @@
    <link rel="stylesheet" href="css/stylesheet.css" type="text/css" charset="utf-8"/>
 <!--lightbox css-->
       <link rel="stylesheet" href="css/colorbox.css"/>
-
+<link rel="stylesheet" href="build/loading-bar.min.css"/>
 <!-- JS -->
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script src="javascript/jquery.colorbox-min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="build/loading-bar.min.js"></script>
+
 </head>
 
   <body ng-app="NewsApp">
      <div ng-controller="MainController">
-
+  
     <div class="title">
         <i class="fa fa-bullhorn fa-3x"></i>
     <h1 class="title" id="logo">aplos news</h1>
@@ -34,7 +36,6 @@
 
     
         <div id="buttoncontainer">
-   
             <a class="inline" href="#one"><button id="main">one</button></a>
             <a class="inline" href="#two"><button id="main">two</button></a>
             <a class="inline" href="#three"><button id="main">three</button></a>
@@ -42,9 +43,7 @@
          
          <div style="display:none">
        <div id="one" style="padding: 10px; background: #fff;">
-           <p class="text-center" ng-hide="dataLoaded">
-           <i class="fa fa-spinner fa-spin"></i>
-           </p>
+          
         
            <div ng-show="dataLoaded">
          <h2> {{news.posts[0].title}}</h1>
@@ -55,6 +54,7 @@
            </div>
       </div>              
        <div id="two" style="padding: 10px; background: #fff;">
+         
           <div ng-show="dataLoaded">
          <h2> {{news.posts[1].title}}</h1>
             <img ng-src="{{news.posts[1].thread.main_image}}">
@@ -63,6 +63,7 @@
                <a href="{{news.posts[1].url}}">source</a>
            </div>
  </div>                    
+    
        <div id="three" style="padding: 10px; background: #fff;">
            <div ng-show="dataLoaded">
          <h2> {{news.posts[2].title}}</h1>
@@ -81,7 +82,6 @@
     
 <script type="text/javascript">
 $(document).ready(function() {
-    $('#one').offset();
 })    
 </script>
          </body>
