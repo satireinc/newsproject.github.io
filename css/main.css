@@ -1,6 +1,7 @@
 
 body{
 font-family: "texgyreherosregular", "Arial";
+    background: lightblue;
 }
 
 .title{
@@ -62,4 +63,14 @@ font-family: "texgyreherosregular", "Arial";
     right: 0;
     margin: auto; 
     
+}
+img{
+    height: 100px;
+    widht: 100px;
+    border: solid 2px black;
+    border-radius: 4px;
+}
+.text{
+    height: 200px;
+    overflow: hidden;
 }
